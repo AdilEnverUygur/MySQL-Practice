@@ -47,7 +47,7 @@ FROM
   employees
 WHERE department_id <> 90;
 
-#二、按逻辑表达式筛选
+#2. Filter by logical expression
  #Case 1: Query the name, salary and bonus of employees whose salary is between 10000 and 20000
 SELECT
   last_name,
