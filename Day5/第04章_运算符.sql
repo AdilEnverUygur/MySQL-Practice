@@ -110,7 +110,7 @@ WHERE salary NOT BETWEEN 6000 AND 8000;
 #练习: 查询部门为10,20,30部门的员工信息
 SELECT last_name,salary,department_id
 FROM employees
-         #WHERE department_id = 10 OR department_id = 20 OR department_id = 30;
+#WHERE department_id = 10 OR department_id = 20 OR department_id = 30;
 WHERE department_id IN(10,20,30);
 
 #练习: 查询工资不是6000,7000,8000的员工信息
