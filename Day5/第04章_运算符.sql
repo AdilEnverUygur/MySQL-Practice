@@ -168,3 +168,40 @@ FROM DUAL;
 #[ab]: 里面包含a或者b即可
 SELECT 'atguigu' REGEXP 'gu.gu','atguigu' REGEXP '[ab]'
 FROM DUAL;
+
+#3. 逻辑运算符(Logical Operators): OR || AND && NOT ! XOR
+
+# OR AND
+SELECT last_name,salary,department_id
+FROM employees
+         #WHERE department_id = 10 OR department_id = 20;
+#WHERE department_id = 10 AND department_id = 20;
+WHERE department_id = 50 AND salary > 6000;
+
+# NOT
+SELECT last_name,salary,department_id
+FROM employees
+         #WHERE salary NOT BETWEEN 6000 AND 8000;
+#WHERE commission_pct IS NOT NULL;
+WHERE NOT commission_pct <=> NULL;
+
+# XOR (异或): 追求的'异' 满足一个条件时不满足另外一个条件
+SELECT last_name,salary,department_id
+FROM employees
+WHERE department_id = 50 XOR salary > 6000;
+
+#注意: AND的优先级高于OR
+
+
+#4. 位运算符 (Bitwise operators): &	 |	 ^	 ~	 >>	 <<
+
+SELECT 12 & 5, 12 | 5, 12 ^ 5
+FROM DUAL;
+
+#按位取反运算符: 按位取反(~)运算符将给定的二进制数逐位进行取反操作, 即将1变为0, 将0变为1;
+SELECT 10 & ~1
+FROM DUAL;
+
+#左移和右移 >> <<
+SELECT 4 << 1, 8 >> 1
+FROM DUAL;
